@@ -36,6 +36,13 @@ repos:
         language: system
         pass_filenames: false
 
+      - id: bandit
+        name: bandit
+        entry: .venv/bin/bandit
+        args: ["-c", "pyproject.toml", "-r", "."]
+        language: system
+        pass_filenames: false
+
       - id: refurb
         name: refurb
         entry: .venv/bin/refurb

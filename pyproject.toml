@@ -14,3 +14,9 @@ per-file-ignores = """
 
 [tool.pylint]
 disable="C0114,C0115,C0116,C0301"
+
+[tool.bandit]
+exclude_dirs = [".venv"]
+
+[tool.bandit.assert_used]
+skips = ["*/tests/*.py"]
